@@ -1,0 +1,223 @@
+/*!
+ * Start Bootstrap - Busines Frontpage (https://startbootstrap.com/template-overviews/business-frontpage)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-business-frontpage/blob/master/LICENSE)
+ */
+
+body {
+    padding-top: 54px;
+}
+
+@media (min-width: 992px) {
+    body {
+        padding-top: 56px;
+    }
+}
+h2,h2,h3,h4,h5,.navbar-brand{
+    font-family: "Surveyor SSm A", "Surveyor SSm B";
+    font-style: normal;
+    font-weight: 400;
+}
+p,a,li {
+    font-family: "Gotham SSm A", "Gotham SSm B";
+    font-style: normal;
+    font-weight: 300;
+}
+.goth-m{
+    font-weight: 700;
+}
+.card-title {
+    font-size:1.3em;
+}
+.btn {
+    font-size:0.9em;
+}
+.navbar-brand{
+    font-weight: 500;
+}
+
+.business-header {
+    height: 50vh;
+    min-height: 300px;
+    background: url('../images/botanybaycover.jpg') center bottom no-repeat scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.bg-image-full {
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.card {
+    height: 100%;
+}
+
+.navbar,
+.dropdown-menu {
+    background-color: #7fa370;
+}
+
+.navbar a {
+    color: #fff;
+}
+
+#home-logo {
+    width: 30%;
+    height: auto;
+    margin-top: 2%;
+    min-width: 150px;
+}
+
+.inner-logo {
+    width: 10%;
+    min-width: 100px;
+}
+
+#logos {text-align: center;}
+#logos img {
+    width: 80%;
+    max-width: 200px;
+}
+
+.card-title {
+    color: #842932;
+}
+
+.btn {
+    background-color: #842932;
+    color: #fff;
+}
+
+.btn:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.red-header {
+    color: #842932;
+}
+
+.white-header {
+    color: #fff;
+}
+
+footer {
+    background-color: #6e7b82;
+    color: #fff;
+}
+
+.nav-item:hover {
+    text-decoration: underline;
+}
+
+.dropdown-item:hover {
+    color: #6e7b82;
+    background-color: #e0d996;
+}
+
+.dropdown-item:active {
+    background-color: #b3d9d9;
+}
+
+.navbar-toggler {
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.5)
+}
+
+.section {
+    padding-top: 60px;
+    margin-top: -40px;
+    margin-bottom: 20px;
+}
+
+i {
+    margin-left: 20px;
+}
+#map-search {
+    width:100%;
+    display: inline-flex;
+}
+#map-search .btn {
+    margin: 10px;
+    cursor: pointer;
+}
+#intro-caption{
+    color:rgba(255,255,255,0.4);
+    position: absolute;
+    top:-30px;
+    right:5px;
+}
+
+
+/*css for iframe embed--- this is temporary until leaflet map is used */
+.embed-container {
+    position: relative;
+    padding-bottom: 50%;
+    height: 0;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+small {
+    position: absolute;
+    z-index: 40;
+    bottom: 0;
+    margin-bottom: -15px;
+}
+#cal {
+    width: 80%;
+}
+
+@media (max-width: 768px) {
+    #footer-content > div {
+       text-align: center;
+       margin-bottom:20px;
+    }
+    #footer-content div:last-child{
+        margin-bottom: 0;
+    }
+}
+#location-map{
+    width:90%;
+    height:200px;
+}
+#map{
+    width:100%;
+    height:500px;
+}
+#image-set {
+    width:35%;
+    height:auto;
+    float:right;
+    margin: 15px;
+}
+.bldg-image{
+    width:100%;
+}
+#image-set:hover{
+    opacity: 0.5;
+}
+/* colors
+Yellow - #e0d996
+Blue - #b3d9d9
+TanRed - #d9c9cf
+Red - #842932
+Grey - #6e7b82
+Stucco - #e6e3e8
+Green - #7fa370 
+*/
