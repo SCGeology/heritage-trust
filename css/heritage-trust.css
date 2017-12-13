@@ -191,10 +191,18 @@ small {
     #footer-content div:last-child{
         margin-bottom: 0;
     }
+    .navbar-brand {
+        font-size:0.85em;
+        margin-left:-5px;
+    }
+    #map-search{
+        display: block;
+    }
 }
 #location-map{
-    width:90%;
+    width:80%;
     height:200px;
+    margin: auto;
 }
 #map{
     width:100%;
