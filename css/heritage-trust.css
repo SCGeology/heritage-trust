@@ -6,6 +6,7 @@
 
 body {
     padding-top: 54px;
+    background-color:#e6e3e8;
 }
 
 @media (min-width: 992px) {
@@ -66,7 +67,9 @@ p,a,li {
 .navbar a {
     color: #fff;
 }
-
+.navbar {
+    box-shadow: 0 4px 6px rgba(0,0,0,0.4);
+}
 #home-logo {
     width: 30%;
     height: auto;
@@ -92,11 +95,13 @@ p,a,li {
 .btn {
     background-color: #842932;
     color: #fff;
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.5);
 }
 
 .btn:hover {
     color: #fff;
     text-decoration: underline;
+    box-shadow: none;
 }
 
 .red-header {
@@ -136,7 +141,7 @@ footer {
     margin-bottom: 20px;
 }
 
-i {
+.fa {
     margin-left: 20px;
 }
 #map-search {
@@ -154,31 +159,6 @@ i {
     right:5px;
 }
 
-
-/*css for iframe embed--- this is temporary until leaflet map is used */
-.embed-container {
-    position: relative;
-    padding-bottom: 50%;
-    height: 0;
-    max-width: 100%;
-}
-
-.embed-container iframe,
-.embed-container object,
-.embed-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-small {
-    position: absolute;
-    z-index: 40;
-    bottom: 0;
-    margin-bottom: -15px;
-}
 #cal {
     width: 80%;
 }
@@ -195,8 +175,18 @@ small {
         font-size:0.85em;
         margin-left:-5px;
     }
+    .navbar {padding:0.9rem;}
+    .navbar-toggler {padding:0;}
     #map-search{
         display: block;
+    }
+    #home-logo{margin-top:5%;}
+    #intro-caption{
+        font-size: 0.8em;
+        margin: auto;
+        width:100%;
+        position: relative;
+        text-align: center;
     }
 }
 #location-map{
@@ -213,6 +203,7 @@ small {
     height:auto;
     float:right;
     margin: 15px;
+    min-width:150px;
 }
 .bldg-image{
     width:100%;
@@ -220,6 +211,10 @@ small {
 #image-set:hover{
     opacity: 0.5;
 }
+#copyright {
+    font-size: 0.8em;
+}
+
 /* colors
 Yellow - #e0d996
 Blue - #b3d9d9
