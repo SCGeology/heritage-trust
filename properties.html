@@ -11,7 +11,7 @@
     <title>Heritage Trust - South Carolina</title>
 
     <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7823874/6975392/css/fonts.css" />
-    
+
     <script src="https://use.fontawesome.com/78d5382ace.js"></script>
 
     <!-- Bootstrap core CSS -->
@@ -20,13 +20,9 @@
     <!-- Custom styles for this template -->
     <link href="css/heritage-trust.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
-  integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
-  crossorigin=""/>
-<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
-  integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
-  crossorigin=""></script>
-    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin=""></script>
+
 </head>
 
 <body>
@@ -46,10 +42,10 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAbout" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownAbout">
-                    <a class="dropdown-item" href="history.html">History</a>
-                    <a class="dropdown-item" href="staff.html">Staff</a>
-                    <a class="dropdown-item" href="parker-annex.html">Archaeology Center</a>
-                    <a class="dropdown-item" href="http://www.dnr.sc.gov/admin/committees/heritage.html">Advisory Board</a>
+                            <a class="dropdown-item" href="history.html">History</a>
+                            <a class="dropdown-item" href="staff.html">Staff</a>
+                            <a class="dropdown-item" href="parker-annex.html">Archaeology Center</a>
+                            <a class="dropdown-item" href="http://www.dnr.sc.gov/admin/committees/heritage.html">Advisory Board</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
@@ -85,9 +81,21 @@
             <h2 class="red-header">Find a Heritage Preserve<i class="fa fa-map-marker" aria-hidden="true"></i></h2>
             <p class="lead">There are Heritage Preserves in every corner of the state.</p>
 
-            <div class="section" id="map-search">
-                <button class="btn">Cultural Preserves<i class="fa fa-check-square-o" aria-hidden="true"></i></button>
-                <button class="btn">Natural Preserves<i class="fa fa-check-square-o" aria-hidden="true"></i></button>
+            <div class="section row" id="map-search">
+                <div class="col-md-4">
+                    <button class="btn" id="cul">Cultural Preserves<i class="fa fa-check-square-o" aria-hidden="true"></i></button>
+                </div>
+                <div class="col-md-4">
+                    <button class="btn" id="nat">Natural Preserves<i class="fa fa-check-square-o" aria-hidden="true"></i></button>
+                </div>
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Property name..." aria-label="Search for...">
+                        <span class="input-group-btn">
+                            <button class="btn" type="button">Search</button>
+                        </span>
+                    </div>
+                </div>
             </div>
 
             <div id="map">
@@ -101,7 +109,7 @@
     <footer class="py-5">
         <div class="container">
             <div class="row" id="footer-content">
-                <div class="col-md-4"> 
+                <div class="col-md-4">
                     <address>
                         <p class="m-0">SC Department of Natural Resources</p>
                         <p class="m-0">1000 Assembly Street</p>
@@ -109,8 +117,8 @@
                     </address>
                 </div>
 
-                <div class="col-md-4 order-8 order-md-4"id="logos">
-                    <img src="images/logos.png" alt="scdnr and heritage trust logos"/>
+                <div class="col-md-4 order-8 order-md-4" id="logos">
+                    <img src="images/logos.png" alt="scdnr and heritage trust logos" />
                     <p class="mt-2" id="copyright">Copyright &copy; 2017</p>
                 </div>
 
@@ -122,23 +130,58 @@
                     </address>
                 </div>
             </div>
-            
-        </div>        
+
+        </div>
     </footer>
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    
+
     <script>
-        var map = L.map('map',{
-            scrollWheelZoom:false
-        }).setView([33.6,-81.0], 7);
-        
+        var map = L.map('map', {
+            scrollWheelZoom: false
+        }).setView([33.6, -81.0], 7);
+
         var Esri_NatGeoWorldMap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}', {
-	attribution: 'Tiles &copy; Esri &mdash; National Geographic, Esri, DeLorme, NAVTEQ, UNEP-WCMC, USGS, NASA, ESA, METI, NRCAN, GEBCO, NOAA, iPC',
-	maxZoom: 16
-}).addTo(map);
+            attribution: 'Tiles &copy; Esri &mdash; National Geographic, Esri, DeLorme, NAVTEQ, UNEP-WCMC, USGS, NASA, ESA, METI, NRCAN, GEBCO, NOAA, iPC',
+            maxZoom: 16
+        }).addTo(map);
+
+        var nat = L.icon({
+            iconUrl: 'images/leaf.svg',
+            iconSize: [30, 30]
+        });
+        var cul = L.icon({
+            iconUrl: 'images/arrowhead.svg',
+            iconSize: [30, 30]
+        });
+
+        var natm = L.marker([33.6, -81], {
+            icon: nat
+        }).addTo(map).bindPopup("Natural HP");
+        var culm = L.marker([34.3, -80.1], {
+            icon: cul
+        }).addTo(map).bindPopup("Cultural HP");
+
+        //combine these into one function
+        $('#cul').click(function() {
+            if (map.hasLayer(culm)) {
+                map.removeLayer(culm);
+            } else {
+                map.addLayer(culm)
+            }
+            $("i", this).toggleClass('fa-square-o fa-square-check-o');
+        });
+
+        $('#nat').click(function() {
+            if (map.hasLayer(natm)) {
+                map.removeLayer(natm);
+            } else {
+                map.addLayer(natm)
+            }
+            $("i", this).toggleClass('fa-square-o fa-square-check-o');
+        });
     </script>
 
 </body>
