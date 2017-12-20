@@ -14,7 +14,7 @@ body {
         padding-top: 56px;
     }
 }
-h2,h2,h3,h4,h5,.navbar-brand{
+h2,h3,h4,h5,h6,.navbar-brand{
     font-family: "Surveyor SSm A", "Surveyor SSm B";
     font-style: normal;
     font-weight: 400;
@@ -23,6 +23,12 @@ p,a,li {
     font-family: "Gotham SSm A", "Gotham SSm B";
     font-style: normal;
     font-weight: 300;
+}
+.red-header{
+    color: #842932;
+}
+.popup {
+    max-width: 200px;
 }
 .goth-m{
     font-weight: 700;
@@ -105,13 +111,6 @@ p,a,li {
 .btn:active {
     box-shadow: none;
 }
-.red-header {
-    color: #842932;
-}
-
-.white-header {
-    color: #fff;
-}
 
 footer {
     background-color: #6e7b82;
@@ -175,9 +174,6 @@ footer {
         font-size:0.85em;
         margin-left:-5px;
     }
-    #map-search > div {
-        margin: 10px 0;
-    }
     .navbar {padding:0.9rem;}
     .navbar-toggler {padding:0;}
     #home-logo{margin-top:5%;}
@@ -187,6 +183,11 @@ footer {
         width:100%;
         position: relative;
         text-align: center;
+    }
+}
+@media (max-width:992px) {
+    #map-search > div {
+        margin: 10px 0;
     }
 }
 #location-map{
@@ -216,6 +217,18 @@ footer {
 }
 .input-group-btn{
     font-size:1em;
+}
+#map-search div {
+    display: inline-flex;
+}
+.map-icon{
+    width:30px;
+    height: 30px;
+    margin-top:4px;
+    margin-left:8px;
+}
+#nat, #cul {
+    width:175px;
 }
 /* colors
 Yellow - #e0d996
