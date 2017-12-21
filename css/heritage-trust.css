@@ -232,13 +232,8 @@ footer {
         margin: 10px 0;
     }
 }
-/*prevents zoom to text box on iphone*/
-@media screen and (-webkit-min-device-pixel-ratio:0) { 
-  select,
-  textarea,
-  input {
+.geocoder-control-input {
     font-size: 16px;
-  }
 }
 
 /* colors
