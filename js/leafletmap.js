@@ -17,7 +17,7 @@
             iconSize: [30, 30]
         });
 
-    var dataurl = "https://services.arcgis.com/acgZYxoN5Oj8pDLa/arcgis/rest/services/DNRHeritagePreserves/FeatureServer/0"
+    var dataurl = "https://services.arcgis.com/acgZYxoN5Oj8pDLa/arcgis/rest/services/scdnr_hp_singlepoint/FeatureServer/0"
 
     var nhp = L.esri.featureLayer({
         url: dataurl,
@@ -40,7 +40,7 @@
         }
     }).addTo(map);
 
-    var popupTemplate = '<div class="popup"><h6 class="red-header">{Proprty_NA}</h6><a href="https://www2.dnr.sc.gov/ManagedLands/ManagedLand/ManagedLand/{MANPROPID}" target="_blank">Property Details</a><br><a href="https://www.google.com/maps/?q={Y},{X}" target="blank_">Directions</a></div>'
+    var popupTemplate = '<div class="popup"><h6 class="red-header">{NAME}</h6><a href="https://www2.dnr.sc.gov/ManagedLands/ManagedLand/ManagedLand/{MANPROPID_1}" target="_blank">Property Details</a></div>'
 
     nhp.bindPopup(function(layer) {
         return L.Util.template(popupTemplate, layer.feature.properties);
@@ -72,8 +72,8 @@
     //search search the map for a preserve or addresses
     var propSearch = L.esri.Geocoding.featureLayerProvider({
         url: dataurl,
-        searchFields: ['Proprty_NA'],
-        label: 'Preserve Name',
+        searchFields: ['NAME'],
+        label: 'Heritage Preserves',
         maxResults: 4
     });
 
