@@ -73,7 +73,10 @@ p,a,li {
     color: #fff;
     box-shadow: 2px 2px 3px rgba(0,0,0,0.5);
 }
-
+.otherbtn {
+    background-color: #7fa370;
+    margin:5px;
+}
 .btn:hover {
     color: #fff;
     text-decoration: underline;
