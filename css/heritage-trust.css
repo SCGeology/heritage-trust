@@ -227,6 +227,11 @@ h4 {
     opacity: 0.5;
 }
 
+/*responsive embed*/
+.embed-responsive {
+    max-width: 800px;
+}
+
 /*FOOTER*/
 footer {
     background-color: #6e7b82;
