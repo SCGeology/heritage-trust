@@ -29,6 +29,7 @@
     <link href="css/heritage-trust.css" rel="stylesheet">
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="" />
+    <link rel="stylesheet" href="https://unpkg.com/esri-leaflet-geocoder@2.2.8/dist/esri-leaflet-geocoder.css">
     
 </head>
 <body>
@@ -68,6 +69,7 @@
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownResources">
                             <a class="dropdown-item" href="education.html">For Educators</a>
                             <a class="dropdown-item" href="researchers.html">For Researchers</a>
+                            <a class="dropdown-item" href="films.html">Films</a>                             
                             <a class="dropdown-item" href="laws.html">Laws</a>
                         </div>
                     </li>
@@ -78,23 +80,24 @@
 
     <!-- Header - set the background image for the header in the line below -->
     <header class="py-5 bg-image-full inner-page-img" style="background: url('images/botanybaycover.jpg') center center no-repeat;">
-        <img class="img-fluid d-block mx-auto inner-logo" src="images/hplogo_white_trans.png" alt="">
+        <img class="img-fluid d-block mx-auto inner-logo" src="images/hplogo_white_trans.png" alt="heritage trust logo">
     </header>
 
     <!-- Content section -->
     <section class="py-5">
+        <span class="navguide">Heritage Trust -> Properties</span>
         <div class="container">
-            <h2 class="red-header">Find a Heritage Preserve<i class="fa fa-map-marker" aria-hidden="true"></i></h2>
+            <h1 class="red-header page-header">Find a Heritage Preserve<i class="fa fa-map-marker" aria-hidden="true"></i></h1>
             <p class="lead">There are Heritage Preserves in every corner of the state.</p>
 
             <div class="section row" id="map-search">
                 <div class="col-md-3">
                     <button class="btn" id="cul">Cultural Preserves<i class="fa fa-check-square-o" aria-hidden="true"></i></button>
-                    <img class="map-icon" src="images/arrowhead.png">
+                    <img class="map-icon" src="images/arrowhead.png" alt="cultural heritage preserve map icon">
                 </div>
                 <div class="col-md-3">
                     <button class="btn" id="nat">Natural Preserves<i class="fa fa-check-square-o" aria-hidden="true"></i></button>
-                    <img class="map-icon" src="images/leaf.png">
+                    <img class="map-icon" src="images/leaf.png" alt="natural heritage preserve map icon">
                 </div>
             </div>
 
@@ -138,11 +141,12 @@
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     
+    <!--leaflet and esri leaflet stuff -->
     <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin=""></script>
     <script src="https://unpkg.com/esri-leaflet@2.0.4/dist/esri-leaflet.js"></script>
     
-    <link rel="stylesheet" href="https://unpkg.com/esri-leaflet-geocoder@2.2.8/dist/esri-leaflet-geocoder.css">
     <script src="https://unpkg.com/esri-leaflet-geocoder@2.2.8"></script>
+    <script src="https://unpkg.com/esri-leaflet-vector@1.0.7/dist/esri-leaflet-vector.js"></script>
 
     <script src="js/leafletmap.js"></script>
 

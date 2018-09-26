@@ -24,7 +24,8 @@
         where: "hp_type = 'natural'",
         pointToLayer: function(geojson, latlng) {
             return L.marker(latlng, {
-                icon: natural
+                icon: natural,
+                alt: "natural heritage preserve map icon"
             });
         }
     }).addTo(map);
@@ -35,7 +36,8 @@
         pointToLayer: function(geojson, latlng) {
             return L.marker(latlng, {
                 icon: cultural,
-                zIndexOffset: 500
+                zIndexOffset: 500,
+                alt: "cultural heritage preserve map icon"
             });
         }
     }).addTo(map);
