@@ -37,7 +37,7 @@ h1,h2,h3,h4,h5,h6,.navbar-brand{
     font-style: normal;
     font-weight: 400;
 }
-p,a,li {
+p,a,li, .a-btn {
     font-family: "Gotham SSm A", "Gotham SSm B";
     font-style: normal;
     font-weight: 300;
@@ -69,6 +69,11 @@ p,a,li {
     font-size:1.1rem;
 }
 a {text-decoration: underline;}
+
+.a-btn {
+    text-decoration: underline;
+    cursor: pointer;
+}
 
 /* --- FONT HEADERS*/
 #index-header{
